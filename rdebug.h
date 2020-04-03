@@ -7,6 +7,8 @@
  * -> add_definitions(-DRDEBUG_USE_SWO_PRINTF)
  *  OR
  * -> add_definitions(-DRDEBUG_USE_SEGGER_RTT)
+ * OR
+ * ->  add_definitions(-DRDEBUG_USE_UART1_PRINTF)
  *
  * WARNING printf  %f e.q. double and float not work in FreeRTOS TASK
  * BE CAREFULL  USING printf(%f) can broken stack task
@@ -15,6 +17,5 @@
  * -> SET(COMMON_FLAGS " -already_written_flags   -u_printf_float")
  *
  */
-
 
 #endif

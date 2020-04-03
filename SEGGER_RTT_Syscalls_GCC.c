@@ -141,5 +141,18 @@ int _write(int file, char *ptr, int len) {
 
 #endif
 
+#ifdef  RDEBUG_USE_UART1_PRINTF
+
+#define UART1_DR *((uint32_t *) 0x4000c000)
+
+int _write(int file, const char *data, int len) {
+    for (int i = 0; i < len; i++) {
+        UART1_DR = data[i];
+    }
+    return len;
+}
+
+#endif
+
 #endif
 /****** End Of File *************************************************/
