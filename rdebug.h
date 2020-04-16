@@ -10,6 +10,8 @@
  * OR
  * ->  add_definitions(-DRDEBUG_USE_UART1_PRINTF)
  *
+ * and please-> add_definitions(-DUSE_FULL_ASSERT) for extended iformation about errors
+ *
  * WARNING printf  %f e.q. double and float not work in FreeRTOS TASK
  * BE CAREFULL  USING printf(%f) can broken stack task
  *
