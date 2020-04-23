@@ -15,6 +15,8 @@
  * WARNING printf  %f e.q. double and float not work in FreeRTOS TASK
  * BE CAREFULL  USING printf(%f) can broken stack task
  *
+ * if your want use printf  %f comment  -> # -specs=nosys.specs -specs=nano.specs  " in CmakeList.txt
+ *
  * For printf %f  not in FreeRTOS task context add to  CMakeLists.txt in section COMMON_FLAGS-> -u_printf_float
  * -> SET(COMMON_FLAGS " -already_written_flags   -u_printf_float")
  *
