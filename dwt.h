@@ -5,9 +5,10 @@
 #define DWT_CONTROL *(volatile unsigned long*) 0xE0001000
 #define SCB_DEMCR *(volatile unsigned long*) 0xE000EDFC
 
-void               dwt_timer_enable(void);
-unsigned long      dwt_timer_get_ticks(void);
-float              dwt_timer_get_time_sec(unsigned long long prev);
-
+void          dwt_timer_enable(void);
+unsigned long dwt_timer_get_ticks(void);
+float         dwt_timer_get_time_sec(unsigned long long prev);
+void          dwt_delay_ms(volatile unsigned long long ms);
+void          dwt_delay_us(volatile unsigned long long us);
 
 #endif
